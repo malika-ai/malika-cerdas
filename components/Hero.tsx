@@ -16,9 +16,11 @@ export const Hero: React.FC = () => {
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden">
-      {/* Static blobs removed in favor of App.tsx global background */}
+      {/* --- Gradient Blurred Blobs --- */}
+      <div className="absolute top-20 right-[-10%] w-[30rem] h-[30rem] bg-red-500/20 rounded-full blur-[100px] -z-10 animate-pulse mix-blend-multiply pointer-events-none" />
+      <div className="absolute bottom-20 left-[-10%] w-[25rem] h-[25rem] bg-gray-400/20 rounded-full blur-[80px] -z-10 mix-blend-multiply pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left: Copy */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -36,8 +38,8 @@ export const Hero: React.FC = () => {
             </span>
           </div>
           
-          {/* Adjusted font size as requested */}
-          <h1 className="text-3xl md:text-5xl lg:text-[2.75rem] font-bold tracking-tight text-gray-900 mb-6 leading-tight">
+          {/* Title size massive for mobile */}
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 mb-6 leading-[1.1] sm:leading-tight">
             FRUSTASI SAMA CS AI YANG <span className="text-red-600 underline decoration-red-300 decoration-4 underline-offset-4">TOL*L?</span>
           </h1>
           

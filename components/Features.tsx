@@ -6,11 +6,15 @@ import { MessageCircle, Globe2, Calculator, Check } from 'lucide-react';
 
 export const Features: React.FC = () => {
   return (
-    <div id="features" className="bg-transparent">
+    <div id="features" className="bg-transparent overflow-hidden">
       
       {/* FEATURE 1: NATURAL */}
-      <Section className="pb-0">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+      <Section className="pb-0 relative">
+        {/* Theme Blob: Blue */}
+        <div className="absolute top-20 right-[-10%] w-[30rem] h-[30rem] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none -z-10" />
+        <div className="absolute bottom-0 left-[-5%] w-[20rem] h-[20rem] bg-indigo-500/10 rounded-full blur-[80px] pointer-events-none -z-10" />
+
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center relative z-10">
           <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
             <GlassCard className="p-2 bg-white/80 border-white shadow-2xl w-full max-w-sm" hoverEffect>
               <div className="rounded-2xl overflow-hidden bg-gray-900 relative">
@@ -49,8 +53,11 @@ export const Features: React.FC = () => {
       </Section>
 
       {/* FEATURE 2: BAHASA SUNDA */}
-      <Section className="pb-0">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+      <Section className="pb-0 relative">
+        {/* Theme Blob: Green */}
+         <div className="absolute top-1/2 left-[-10%] w-[35rem] h-[35rem] bg-green-500/10 rounded-full blur-[100px] pointer-events-none -z-10 -translate-y-1/2" />
+
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center relative z-10">
           <div className="order-1">
             <div className="w-12 h-12 rounded-2xl bg-green-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-green-600/20">
               <Globe2 size={24} />
@@ -88,8 +95,11 @@ export const Features: React.FC = () => {
       </Section>
 
       {/* FEATURE 3: ONGKIR */}
-      <Section>
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+      <Section className="relative">
+        {/* Theme Blob: Orange */}
+        <div className="absolute bottom-0 right-[-10%] w-[35rem] h-[35rem] bg-orange-500/10 rounded-full blur-[100px] pointer-events-none -z-10" />
+
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center relative z-10">
           <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
              <GlassCard className="p-2 bg-white/80 border-white shadow-2xl w-full max-w-sm" hoverEffect>
               <div className="rounded-2xl overflow-hidden bg-gray-900 relative">

@@ -6,8 +6,12 @@ import { AlertTriangle, XCircle } from 'lucide-react';
 
 export const ProblemSolution: React.FC = () => {
   return (
-    <Section id="problem" className="bg-transparent">
-      <div className="max-w-6xl mx-auto">
+    <Section id="problem" className="bg-transparent relative">
+      
+      {/* --- Gradient Blurred Blobs --- */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-red-500/10 rounded-full blur-[100px] -z-10 pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
           {/* Text Section (Left) */}
@@ -16,7 +20,7 @@ export const ProblemSolution: React.FC = () => {
               <AlertTriangle size={14} className="text-red-600" />
               <span className="text-xs font-bold uppercase tracking-wide text-red-600">Realita Pahit</span>
             </div>
-            {/* Removed <br/> tag below */}
+            
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
               HARUSNYA JADI SOLUSI, <span className="text-red-600">MALAH NGRECOKI!</span>
             </h2>
