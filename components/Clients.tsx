@@ -45,9 +45,6 @@ export const Clients: React.FC = () => {
 
   return (
     <Section id="clients" className="bg-transparent overflow-hidden relative">
-      {/* --- Gradient Blurred Blob --- */}
-      <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-gray-300/20 rounded-full blur-[100px] pointer-events-none -z-10" />
-
       <div className="text-center mb-16 max-w-3xl mx-auto px-6 relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">DIPERCAYA RATUSAN BRAND!</h2>
         <p className="text-lg text-gray-500">

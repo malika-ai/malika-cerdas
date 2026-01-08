@@ -7,10 +7,6 @@ import { AlertTriangle, XCircle } from 'lucide-react';
 export const ProblemSolution: React.FC = () => {
   return (
     <Section id="problem" className="bg-transparent relative">
-      
-      {/* --- Gradient Blurred Blobs --- */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-red-500/10 rounded-full blur-[100px] -z-10 pointer-events-none" />
-
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           

@@ -16,10 +16,6 @@ export const Hero: React.FC = () => {
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden">
-      {/* --- Gradient Blurred Blobs --- */}
-      <div className="absolute top-20 right-[-10%] w-[30rem] h-[30rem] bg-red-500/20 rounded-full blur-[100px] -z-10 animate-pulse mix-blend-multiply pointer-events-none" />
-      <div className="absolute bottom-20 left-[-10%] w-[25rem] h-[25rem] bg-gray-400/20 rounded-full blur-[80px] -z-10 mix-blend-multiply pointer-events-none" />
-
       <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left: Copy */}
         <motion.div

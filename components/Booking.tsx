@@ -19,10 +19,6 @@ export const Booking: React.FC = () => {
 
   return (
     <Section id="booking" className="mb-20 bg-transparent relative">
-      {/* --- Gradient Blurred Blob --- */}
-      <div className="absolute bottom-[-10%] left-[-10%] w-[35rem] h-[35rem] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none -z-10" />
-      <div className="absolute top-10 right-[-5%] w-[25rem] h-[25rem] bg-green-500/10 rounded-full blur-[80px] pointer-events-none -z-10" />
-
       <GlassCard className="max-w-5xl mx-auto overflow-hidden bg-white/80 shadow-2xl shadow-blue-900/10 backdrop-blur-md relative z-10">
         <div className="grid md:grid-cols-5 min-h-[600px]">
           {/* Left Side: Copy */}
