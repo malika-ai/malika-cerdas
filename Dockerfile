@@ -1,5 +1,5 @@
 # Stage 1: Build stage
-FROM oven/bun:2 AS builder
+FROM oven/bun:1.3 AS builder
 WORKDIR /app
 COPY package.json ./
 RUN bun install
