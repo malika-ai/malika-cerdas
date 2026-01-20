@@ -3,15 +3,14 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { ASSETS } from '../constants';
 import { GlassCard } from './ui/GlassCard';
+import { trackAddToCart } from '../utils/analytics';
 
 export const Hero: React.FC = () => {
   const scrollToBooking = () => {
     document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
-    
+
     // Track intent to book as AddToCart
-    if ((window as any).fbq) {
-      (window as any).fbq('track', 'AddToCart');
-    }
+    trackAddToCart();
   };
 
   return (

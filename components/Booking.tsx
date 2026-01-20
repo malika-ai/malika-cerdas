@@ -2,6 +2,7 @@ import React from 'react';
 import { Section } from './ui/Section';
 import { GlassCard } from './ui/GlassCard';
 import { Calendar, ArrowRight } from 'lucide-react';
+import { trackAddToCart } from '../utils/analytics';
 
 export const Booking: React.FC = () => {
   const phoneNumber = '6282211114681';
@@ -10,12 +11,6 @@ export const Booking: React.FC = () => {
 
   // Using the exact link provided by user
   const calendarLink = "https://calendar.google.com/calendar/appointments/AcZssZ31oJJ-O24bwoCzJx1DkIBMD9kb4hHjWZ72mH0=";
-
-  const handleTrack = () => {
-    if ((window as any).fbq) {
-      (window as any).fbq('track', 'AddToCart');
-    }
-  };
 
   return (
     <Section id="booking" className="mb-20 bg-transparent relative">
@@ -69,11 +64,11 @@ export const Booking: React.FC = () => {
              {/* WhatsApp CTA below Calendar */}
              <div className="text-center py-4 bg-green-50 rounded-xl border border-green-100">
                 <p className="text-sm text-green-800 font-medium mb-2">Belum menemukan jadwal yang cocok?</p>
-                <a 
+                <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={handleTrack}
+                  onClick={trackAddToCart}
                   className="inline-flex items-center justify-center gap-2 px-6 py-2 bg-[#25D366] text-white rounded-lg font-semibold hover:bg-green-600 transition-colors shadow-sm"
                 >
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">

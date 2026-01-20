@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ASSETS, NAVIGATION } from '../constants';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { trackAddToCart } from '../utils/analytics';
 
 export const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,11 +10,9 @@ export const Navbar: React.FC = () => {
   const scrollToBooking = () => {
     document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
     setIsMobileMenuOpen(false);
-    
+
     // Track intent to book as AddToCart
-    if ((window as any).fbq) {
-      (window as any).fbq('track', 'AddToCart');
-    }
+    trackAddToCart();
   };
 
   return (

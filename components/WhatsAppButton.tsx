@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { trackAddToCart } from '../utils/analytics';
 
 export const WhatsAppButton: React.FC = () => {
   const phoneNumber = '6282211114681';
@@ -7,18 +8,12 @@ export const WhatsAppButton: React.FC = () => {
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-  const handleTrack = () => {
-    if ((window as any).fbq) {
-      (window as any).fbq('track', 'AddToCart');
-    }
-  };
-
   return (
     <motion.a
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={handleTrack}
+      onClick={trackAddToCart}
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1, type: 'spring', stiffness: 260, damping: 20 }}
